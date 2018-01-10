@@ -20,7 +20,12 @@ class Header extends Component {
           <Typography type="title" color="inherit">
             Phillip Oliver
           </Typography>
-          <IconButton color="contrast" aria-label="Menu" className="logo">
+          <IconButton
+            color="contrast"
+            aria-label="Menu"
+            className="logo"
+            href="https://www.github.com/"
+          >
             <img src={githubLogo} alt="logo" />
           </IconButton>
         </Toolbar>
