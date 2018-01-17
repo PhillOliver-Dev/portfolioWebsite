@@ -5,9 +5,8 @@ import Typography from "material-ui/Typography";
 import IconButton from "material-ui/IconButton";
 import MenuIcon from "material-ui-icons/Menu";
 
-import githubLogo from "../../assets/github.svg";
-
-import "./Header.css";
+import { style } from "../styles/components/Header.style";
+import githubLogo from "../assets/github.svg";
 
 class Header extends Component {
   render() {
@@ -23,8 +22,8 @@ class Header extends Component {
           <IconButton
             color="contrast"
             aria-label="Menu"
-            className="logo"
-            href="https://www.github.com/"
+            style={style.navButton}
+            href="https://github.com/PhillOliver-Dev"
           >
             <img src={githubLogo} alt="logo" />
           </IconButton>
