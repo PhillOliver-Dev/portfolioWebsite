@@ -6,6 +6,14 @@ body {
 
 .AppCard {
   margin: auto;
-  margin-top: 20px;
+  margin-bottom: 20px;
   max-width: 1000px;
+}
+
+.Content {
+  padding: 20px;
+}
+
+.Sidebar {
+  width: 300px;
 }
