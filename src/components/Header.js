@@ -13,7 +13,13 @@ class Header extends Component {
     return (
       <AppBar position="static">
         <Toolbar>
-          <IconButton color="contrast" aria-label="Menu">
+          <IconButton
+            color="contrast"
+            aria-label="Menu"
+            onClick={() => {
+              this.props.openDrawer(true);
+            }}
+          >
             <MenuIcon />
           </IconButton>
           <Typography type="title" color="inherit">

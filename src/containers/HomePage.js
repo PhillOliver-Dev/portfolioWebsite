@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 
-import { style } from "../styles/containers/HomePage.style";
 import About from "../components/About";
 import Projects from "../containers/Projects";
 
 class HomePage extends Component {
   render() {
     return (
-      <div style={style.homePage}>
-        <div style={style.elem}>
+      <div>
+        <div>
           <About />
           <Projects />
         </div>

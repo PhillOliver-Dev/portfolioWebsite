@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Project from "../components/Project";
 
 import { getGithubURL } from "../config";
-import { style } from "../styles/containers/Projects.style";
 
 class Projects extends Component {
   constructor() {

@@ -2,18 +2,19 @@ import React, { Component } from "react";
 import Card, { CardContent } from "material-ui/Card";
 import Typography from "material-ui/Typography";
 
-class Project extends Component {
+class ContactPage extends Component {
   render() {
     return (
       <Card className="AppCard">
         <CardContent>
           <Typography type="headline" component="h1">
-            {this.props.prObject.name}
+            {"Contact me"}
           </Typography>
+          <Typography component="p">{"Test"}</Typography>
         </CardContent>
       </Card>
     );
   }
 }
 
-export default Project;
+export default ContactPage;

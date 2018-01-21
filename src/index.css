@@ -5,5 +5,7 @@ body {
 }
 
 .AppCard {
-  margin: 20px;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 1000px;
 }
