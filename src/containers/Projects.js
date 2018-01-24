@@ -13,7 +13,7 @@ class Projects extends Component {
   }
 
   componentDidMount() {
-    fetch(getGithubURL())
+    fetch(getGithubURL("/repos"))
       .then(res => res.json())
       .then(out => {
         this.setState({

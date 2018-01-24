@@ -1,7 +1,7 @@
-const githubUserName = "PhillOliver-Dev";
+const githubUserName = "philloliver-dev";
 
-const getGithubURL = () => {
-  return "https://api.github.com/users/" + githubUserName + "/repos";
+const getGithubURL = suffix => {
+  return "https://api.github.com/users/" + githubUserName + (suffix || "");
 };
 
 const navBarLinks = {
