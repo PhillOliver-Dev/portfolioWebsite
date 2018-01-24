@@ -6,9 +6,14 @@ import Header from "../components/Header";
 import HomePage from "./HomePage";
 import ContactPage from "../components/ContactPage";
 import NavDrawer from "../components/NavDrawer";
+import Projects from "./Projects";
 
 const Home = () => {
   return <HomePage className="AppCard" />;
+};
+
+const ProjList = () => {
+  return <Projects className="AppCard" />;
 };
 
 const Contact = () => {
@@ -40,6 +45,7 @@ class App extends Component {
           <div className="Content">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/projects" component={ProjList} />
               <Route exact path="/contact" component={Contact} />
             </Switch>
           </div>

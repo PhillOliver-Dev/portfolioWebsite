@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import List, { ListItem, ListItemText } from "material-ui/List";
 import Divider from "material-ui/Divider";
+import { Link } from "react-router-dom";
 import { styles } from "../styles/components/NavDrawer.style";
+import { navBarLinks } from "../config";
 
 class NavDrawer extends Component {
   render() {
@@ -10,17 +12,16 @@ class NavDrawer extends Component {
         <ListItem button onClick={() => this.props.closeDrawer(false)}>
           <ListItemText primary=">" style={styles.rightButton} />
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="Home" />
-        </ListItem>
-        <Divider light />
-        <ListItem button>
-          <ListItemText primary="Projects" />
-        </ListItem>
-        <Divider />
-        <ListItem button>
-          <ListItemText primary="Contact" />
-        </ListItem>
+        {Object.keys(navBarLinks).map(key => {
+          return (
+            <Link to={navBarLinks[key].link}>
+              <ListItem button onClick={() => this.props.closeDrawer(false)}>
+                <ListItemText primary={key} />
+              </ListItem>
+              <Divider light />
+            </Link>
+          );
+        })}
       </List>
     );
   }
