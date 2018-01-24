@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { CircularProgress } from "material-ui/Progress";
 
 import About from "../components/About";
-import Projects from "../containers/Projects";
 
 import { getGithubURL } from "../config";
 import { styles } from "../styles/containers/HomePage.style.js";

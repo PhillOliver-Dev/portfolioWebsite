@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import Card, { CardContent, CardHeader } from "material-ui/Card";
 import Avatar from "material-ui/Avatar";
 import Typography from "material-ui/Typography";
-import BannerImg from "../assets/banner.jpg";
-
-import { styles } from "../styles/components/About.style.js";
 
 class About extends Component {
   render() {
