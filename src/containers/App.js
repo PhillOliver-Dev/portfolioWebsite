@@ -36,7 +36,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolioWebsite">
         <div className="App">
           <Drawer type="persistent" open={this.state.isDrawerOpen}>
             <NavDrawer closeDrawer={this.changeDrawerOpen} />
