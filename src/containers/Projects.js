@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { CircularProgress } from "material-ui/Progress";
 
 import Project from "../components/Project";
 
@@ -8,6 +9,7 @@ class Projects extends Component {
   constructor() {
     super();
     this.state = {
+      isLoading: true,
       projectURLs: []
     };
   }
@@ -17,7 +19,8 @@ class Projects extends Component {
       .then(res => res.json())
       .then(out => {
         this.setState({
-          projectURLs: out
+          projectURLs: out,
+          isLoading: false
         });
       });
   }
@@ -25,11 +28,17 @@ class Projects extends Component {
   render() {
     return (
       <div>
-        {this.state.projectURLs.map(project => (
+        {this.state.isLoading ? (
+          <CircularProgress className="Progress" />
+        ) : (
           <div>
-            <Project prObject={project} />
+            {this.state.projectURLs.map(project => (
+              <div>
+                <Project prObject={project} />
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </div>
     );
   }

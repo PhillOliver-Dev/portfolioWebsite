@@ -17,3 +17,10 @@ body {
 .Sidebar {
   width: 300px;
 }
+
+.Progress {
+  height: 300px !important;
+  width: 300px !important;
+  position: relative !important;
+  left: calc(50% - 150px) !important;
+}

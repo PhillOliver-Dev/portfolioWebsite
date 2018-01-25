@@ -4,7 +4,6 @@ import { CircularProgress } from "material-ui/Progress";
 import About from "../components/About";
 
 import { getGithubURL } from "../config";
-import { styles } from "../styles/containers/HomePage.style.js";
 
 class HomePage extends Component {
   constructor() {
@@ -31,7 +30,7 @@ class HomePage extends Component {
       <div>
         <div>
           {this.state.isLoading ? (
-            <CircularProgress style={styles.progress} />
+            <CircularProgress className="Progress" />
           ) : (
             <About userDetails={this.state.userDetails} />
           )}
