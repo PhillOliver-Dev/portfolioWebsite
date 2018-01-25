@@ -1,6 +1,6 @@
 {
   "name": "portfoliowebsite",
-  "homepage": "https://philloliver-dev.github.io",
+  "homepage": "https://philloliver-dev.github.io/dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0"
