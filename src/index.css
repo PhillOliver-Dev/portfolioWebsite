@@ -14,8 +14,12 @@ body {
   padding: 20px;
 }
 
-.Sidebar {
-  width: 300px;
+.NavBar {
+  width: 220px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .Progress {
