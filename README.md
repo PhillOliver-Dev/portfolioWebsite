@@ -1,6 +1,6 @@
-#Portfolio Website
+# Portfolio Website
 
-##A website for any budding developer
+## A website for any budding developer
 
 > Who needs to have any valuable skills when you have a pretty website?
 > Jesus - 12AD
