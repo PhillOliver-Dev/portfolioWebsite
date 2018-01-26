@@ -33,9 +33,7 @@ class Projects extends Component {
         ) : (
           <div>
             {this.state.projectURLs.map(project => (
-              <div>
-                <Project prObject={project} />
-              </div>
+              <Project prObject={project} key={project.id} />
             ))}
           </div>
         )}

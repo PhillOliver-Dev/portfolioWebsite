@@ -21,10 +21,10 @@ class NavDrawer extends Component {
         <ListSubheader>Menu</ListSubheader>
         {Object.keys(navBarLinks).map(key => {
           return (
-            <Link to={navBarLinks[key].link}>
+            <Link to={navBarLinks[key].link} key={key}>
               <ListItem button onClick={() => this.props.closeDrawer(false)}>
                 <ListItemIcon>
-                  <Avatar>{key.charAt(0)}</Avatar>
+                  <Avatar style={styles.avatar}>{key.charAt(0)}</Avatar>
                 </ListItemIcon>
                 <ListItemText primary={key} />
               </ListItem>
