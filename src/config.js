@@ -4,6 +4,14 @@ const getGithubURL = suffix => {
   return "https://api.github.com/users/" + githubUserName + (suffix || "");
 };
 
+const getReadMeUrl = project => {
+  return (
+    "https://raw.githubusercontent.com/PhillOliver-Dev/" +
+    project +
+    "/master/README.md"
+  );
+};
+
 const navBarLinks = {
   Home: {
     link: "/"
@@ -18,5 +26,6 @@ const navBarLinks = {
 
 module.exports = {
   getGithubURL,
+  getReadMeUrl,
   navBarLinks
 };
