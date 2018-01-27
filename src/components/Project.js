@@ -8,7 +8,6 @@ import ReactMarkdown from "react-markdown";
 import githubLogo from "../assets/github.svg";
 
 import { getReadMeUrl } from "../config";
-import { style } from "../styles/components/Project.style";
 
 class Project extends Component {
   constructor() {
@@ -49,7 +48,7 @@ class Project extends Component {
             <IconButton
               color="contrast"
               aria-label="Menu"
-              style={style.navButton}
+              className="Invert"
               href={this.props.prObject.html_url}
             >
               <img src={githubLogo} alt="logo" />
@@ -57,13 +56,6 @@ class Project extends Component {
           }
         />
         <Card>
-          <CardHeader
-            title={
-              <Typography type="subheading" component="i">
-                README.md
-              </Typography>
-            }
-          />
           <CardContent>
             {!this.state.isLoading ? (
               <ReactMarkdown source={this.state.readMeContent} />

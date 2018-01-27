@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { CircularProgress } from "material-ui/Progress";
 
 import About from "../components/About";
+import ProjectsOverview from "../components/ProjectsOverview";
+import DevInfo from "../components/DevInfo";
 
 import { getGithubURL } from "../config";
 
@@ -32,7 +34,11 @@ class HomePage extends Component {
           {this.state.isLoading ? (
             <CircularProgress className="Progress" />
           ) : (
-            <About userDetails={this.state.userDetails} />
+            <div>
+              <About userDetails={this.state.userDetails} />
+              <ProjectsOverview />
+              <DevInfo />
+            </div>
           )}
         </div>
       </div>

@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .AppCard {
   margin: auto;
   margin-bottom: 20px;
@@ -14,12 +18,13 @@ body {
   padding: 20px;
 }
 
-.NavBar {
-  width: 220px;
+.Invert {
+  -webkit-filter: invert(100%);
+  font-size: 6;
 }
 
-a {
-  text-decoration: none;
+.NavBar {
+  width: 220px;
 }
 
 .Progress {

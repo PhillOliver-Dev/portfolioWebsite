@@ -9,7 +9,11 @@ import NavDrawer from "../components/NavDrawer";
 import Projects from "./Projects";
 
 const Home = () => {
-  return <HomePage className="AppCard" />;
+  return (
+    <div className="AppCard">
+      <HomePage />
+    </div>
+  );
 };
 
 const ProjList = () => {

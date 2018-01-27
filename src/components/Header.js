@@ -7,6 +7,7 @@ import MenuIcon from "material-ui-icons/Menu";
 
 import { style } from "../styles/components/Header.style";
 import githubLogo from "../assets/github.svg";
+import { getURL } from "../config";
 
 class Header extends Component {
   render() {
@@ -29,7 +30,7 @@ class Header extends Component {
             color="contrast"
             aria-label="Menu"
             style={style.navButton}
-            href="https://github.com/PhillOliver-Dev"
+            href={getURL()}
           >
             <img src={githubLogo} alt="logo" />
           </IconButton>
