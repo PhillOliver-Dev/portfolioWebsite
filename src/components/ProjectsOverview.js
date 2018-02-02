@@ -54,10 +54,11 @@ class ProjectsOverview extends Component {
     const intervals = Object.keys(languages).length;
     Object.keys(languages).forEach((l, index) => {
       const blueAdjust = 255 / intervals * index;
+      console.log(blueAdjust);
       data.push({
         value: languages[l],
         label: l,
-        color: "#00AA" + (255 - blueAdjust).toString(16)
+        color: "#00AA" + Math.floor(255 - blueAdjust).toString(16)
       });
     });
     console.log(data);
