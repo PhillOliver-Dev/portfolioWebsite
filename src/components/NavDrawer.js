@@ -16,7 +16,7 @@ class NavDrawer extends Component {
     return (
       <List className="NavBar">
         <ListItem button onClick={() => this.props.closeDrawer(false)}>
-          <ListItemText primary=">" style={styles.rightButton} />
+          <ListItemText primary=">>" style={styles.rightButton} />
         </ListItem>
         <ListSubheader>Menu</ListSubheader>
         {Object.keys(navBarLinks).map(key => {

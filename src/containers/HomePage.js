@@ -36,7 +36,7 @@ class HomePage extends Component {
           ) : (
             <div>
               <About userDetails={this.state.userDetails} />
-              <ProjectsOverview />
+              <ProjectsOverview repoUrl={this.state.userDetails.repos_url} />
               <DevInfo />
             </div>
           )}
