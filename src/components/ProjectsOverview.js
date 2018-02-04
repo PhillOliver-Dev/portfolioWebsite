@@ -7,6 +7,13 @@ import { styles } from "../styles/components/ProjectsOverview.style";
 
 import ComputerIcon from "material-ui-icons/Computer";
 
+const numToBytes = bytes => {
+  const logBytes = Math.floor(Math.log(bytes) / Math.log(1024));
+  const bitMajor = logBytes > 0 ? 1024 * logBytes : 1;
+  const suffix = ["B", "KB", "MB", "GB", "TB"];
+  return Math.floor(bytes / bitMajor) + suffix[logBytes];
+};
+
 class ProjectsOverview extends Component {
   constructor() {
     super();
@@ -54,18 +61,20 @@ class ProjectsOverview extends Component {
     const intervals = Object.keys(languages).length;
     Object.keys(languages).forEach((l, index) => {
       const blueAdjust = 255 / intervals * index;
-      console.log(blueAdjust);
       data.push({
         value: languages[l],
         label: l,
         color: "#00AA" + Math.floor(255 - blueAdjust).toString(16)
       });
     });
-    console.log(data);
     return data;
   };
 
   render() {
+    const width =
+      window.screen.availWidth - 100 > styles.graph.width
+        ? styles.graph.width
+        : window.screen.availWidth - 100;
     return (
       <div className="AppCard">
         {this.state.isLoading ? (
@@ -92,7 +101,12 @@ class ProjectsOverview extends Component {
                     data={this.convertLanguageToDataSchema(
                       this.state.languages
                     )}
-                    width={styles.graph.width}
+                    options={{
+                      tooltipTemplate: function(d) {
+                        return d.label + ": " + numToBytes(d.value);
+                      }
+                    }}
+                    width={width}
                     height={styles.graph.height}
                   />
                   <Typography type="subheading" component="h3">

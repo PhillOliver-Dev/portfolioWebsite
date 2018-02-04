@@ -30,9 +30,11 @@ class Project extends Component {
   };
 
   decameliseText = text => {
-    return (
-      text.charAt(0).toUpperCase() + text.replace(/([A-Z])/g, " $1").slice(1)
-    );
+    let prefix = "";
+    if (text.charAt(0) !== text.charAt(0).toUpperCase()) {
+      prefix = text.charAt(0).toUpperCase();
+    }
+    return prefix + text.replace(/([A-Z])/g, " $1").slice(1);
   };
 
   render() {
