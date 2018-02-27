@@ -15,7 +15,6 @@ class Header extends Component {
       <AppBar position="static">
         <Toolbar>
           <IconButton
-            color="contrast"
             aria-label="Menu"
             onClick={() => {
               this.props.openDrawer(true);
@@ -27,7 +26,6 @@ class Header extends Component {
             Phillip Oliver
           </Typography>
           <IconButton
-            color="contrast"
             aria-label="Menu"
             style={style.navButton}
             href={getURL()}

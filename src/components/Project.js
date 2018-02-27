@@ -48,7 +48,6 @@ class Project extends Component {
           }
           action={
             <IconButton
-              color="contrast"
               aria-label="Menu"
               className="Invert"
               href={this.props.prObject.html_url}

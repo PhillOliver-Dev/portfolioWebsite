@@ -6,17 +6,21 @@ import List, {
   ListItemIcon,
   ListSubheader
 } from "material-ui/List";
+import Typography from 'material-ui/Typography'
 import Divider from "material-ui/Divider";
 import { Link } from "react-router-dom";
 import { styles } from "../styles/components/NavDrawer.style";
 import { navBarLinks } from "../config";
 
 class NavDrawer extends Component {
+
+  backText = () => <Typography variant={"caption"}>{"close"}</Typography>
+
   render() {
     return (
       <List className="NavBar">
         <ListItem button onClick={() => this.props.closeDrawer(false)}>
-          <ListItemText primary=">>" style={styles.rightButton} />
+          <ListItemText primary={this.backText()} style={styles.rightButton} />
         </ListItem>
         <ListSubheader>Menu</ListSubheader>
         {Object.keys(navBarLinks).map(key => {

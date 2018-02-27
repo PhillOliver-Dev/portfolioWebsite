@@ -18,7 +18,6 @@ class DevInfo extends Component {
           }
           action={
             <IconButton
-              color="contrast"
               aria-label="Menu"
               className="Invert"
               href="https://github.com/PhillOliver-Dev"
