@@ -85,12 +85,12 @@ class ProjectsOverview extends Component {
               <CardHeader
                 avatar={<ComputerIcon />}
                 title={
-                  <Typography type="headline" component="h1">
+                  <Typography variant="headline" component="h1">
                     {"User Overview"}
                   </Typography>
                 }
                 subheader={
-                  <Typography type="subheading" component="h3">
+                  <Typography variant="subheading" component="h3">
                     {"Taken from user's github projects"}
                   </Typography>
                 }
@@ -109,7 +109,7 @@ class ProjectsOverview extends Component {
                     width={width}
                     height={styles.graph.height}
                   />
-                  <Typography type="subheading" component="h3">
+                  <Typography variant="subheading" component="h3">
                     {"Language Usage Across Projects"}
                   </Typography>
                   <hr />

@@ -42,7 +42,7 @@ class Project extends Component {
       <Card className="AppCard">
         <CardHeader
           title={
-            <Typography type="headline" component="h1">
+            <Typography variant="headline" component="h1">
               {this.decameliseText(this.props.prObject.name)}
             </Typography>
           }

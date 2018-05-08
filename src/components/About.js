@@ -10,13 +10,13 @@ class About extends Component {
         <CardHeader
           avatar={<Avatar src={this.props.userDetails["avatar_url"]} />}
           title={
-            <Typography type="headline" component="h1">
+            <Typography variant="headline" component="h1">
               {"About Me"}
             </Typography>
           }
         />
         <CardContent>
-          <Typography type="subheading" component="h1">
+          <Typography variant="subheading" component="h1">
             {this.props.userDetails.bio}
           </Typography>
         </CardContent>

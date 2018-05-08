@@ -19,10 +19,11 @@ class Header extends Component {
             onClick={() => {
               this.props.openDrawer(true);
             }}
+            color={'inherit'}
           >
             <MenuIcon />
           </IconButton>
-          <Typography type="title" color="inherit">
+          <Typography variant="title" color="inherit">
             Phillip Oliver
           </Typography>
           <IconButton

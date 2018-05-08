@@ -24,9 +24,6 @@ const navBarLinks = {
   },
   Projects: {
     link: "projects"
-  },
-  Contact: {
-    link: "contact"
   }
 };
 

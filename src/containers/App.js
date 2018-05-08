@@ -4,7 +4,6 @@ import Drawer from "material-ui/Drawer";
 
 import Header from "../components/Header";
 import HomePage from "./HomePage";
-import ContactPage from "../components/ContactPage";
 import NavDrawer from "../components/NavDrawer";
 import Projects from "./Projects";
 
@@ -18,10 +17,6 @@ const Home = () => {
 
 const ProjList = () => {
   return <Projects className="AppCard" />;
-};
-
-const Contact = () => {
-  return <ContactPage className="AppCard" />;
 };
 
 class App extends Component {
@@ -50,7 +45,6 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/projects" component={ProjList} />
-              <Route exact path="/contact" component={Contact} />
             </Switch>
           </div>
         </div>

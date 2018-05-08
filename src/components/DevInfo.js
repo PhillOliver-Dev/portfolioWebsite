@@ -12,7 +12,7 @@ class DevInfo extends Component {
       <Card>
         <CardHeader
           title={
-            <Typography type="subheading" component="h1">
+            <Typography variant="title" component="h1">
               {"Website Created By"}
             </Typography>
           }
@@ -27,7 +27,7 @@ class DevInfo extends Component {
           }
         />
         <CardContent>
-          <Typography type="caption">{content.homepageText}</Typography>
+          <Typography variant="body2">{content.homepageText}</Typography>
         </CardContent>
       </Card>
     );
